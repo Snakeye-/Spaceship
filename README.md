@@ -8,8 +8,8 @@ This code is my compilation of getting this thing to work. Feel free to use it a
 <a href="http://www.amazon.com/Raspberry-Pi-Projects-Andrew-Robinson/dp/1118555430/ref=sr_1_1?s=books&ie=UTF8&qid=1422784443&sr=1-1&keywords=raspberry+pi+projects&pebp=1422784447493&peasin=1118555430">Raspberry Pi Projects</a> by Andrew Robinson & Mike Cook
 
 I found my sounds and modified them using Adobe Soundbooth (which is obsolete, I believe Adobe uses Audacity now) at:
-http://www.freesound.org
-http://history.nasa.gov/ap11fj
+http://www.freesound.org, 
+http://history.nasa.gov/ap11fj, 
 http://www.soundsnap.com
 
 
