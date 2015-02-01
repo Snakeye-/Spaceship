@@ -38,7 +38,7 @@ void ReadCockpit() {                // sub-program that sends button pins (when 
      onState[i] = 0;                // Not triggered
    }
  }
- delay(20);}
+ delay(10);}
 
 
 void loop() { 
@@ -46,14 +46,14 @@ void loop() {
   if (Serial.available()) {
    char MC = Serial.read();
    if (MC == 'H') {                       // RPi sends Arduino 'H' if MC triggered
-     delay(900);                          // delay for RPi sound to start
+     delay(900);                          // delay to allow RPi sound to start
      MChack=-1001;                        // set hack to start at -1001
-     while (millis()-MChack != 1000) {    // current time minus hack... starts at 1001 and gets larger until MC button press resets
+     while (millis()-MChack != 700) {     // current time minus hack... starts at 1001 and gets larger (subtracting a negative) until MC button press resets
        if ( (millis () - MCtimer) >= MCinterval) {
        MCflash(); 
        if ( digitalRead(4)==LOW) {
-         MChack=millis();                 // MC button reset, starting .9sec delay
-         Serial.write(4);                 // send MC Pin to RPi to shut down sound
+         MChack=millis();                 // MC button reset, starting .7sec delay (the 700 above)
+         Serial.write(4);                 // send MC Pin to RPi to shut down the sound loop
          }
        }}
        digitalWrite(MCled, LOW);
