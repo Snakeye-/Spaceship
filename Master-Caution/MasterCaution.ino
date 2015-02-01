@@ -23,7 +23,7 @@ void MCflash() {           // sub-program that loops to blink MC LED
       digitalWrite (MCled, HIGH);
   else
       digitalWrite (MCled, LOW);
-  MCtimer = millis (); 
+  MCtimer = millis ();  
 } 
 
 
